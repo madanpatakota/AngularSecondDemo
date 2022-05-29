@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ɵCompiler_compileModuleSync__POST_R3__ } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -23,9 +23,20 @@ export class AppComponent {
 
   inputType = "text";
 
-  evtKeyup(OrderCity: HTMLInputElement) {  //html elemnt
+  evtKeyup(OrderCity: HTMLInputElement,eventDetails:any) {  //html elemnt
+    
+    //eventDetails is a keyboardeventobject
+    //this object contains the key property
+    //key property contains the my value.
+
+    console.log(eventDetails.key);
+
+
     //console.log(OrderCity.value);
+
+
     this.CityName = OrderCity.value;
+    console.log(eventDetails);
     //  if(this.CityName.length>10){
     //    alert("Please do't enter the value");
     //  }
