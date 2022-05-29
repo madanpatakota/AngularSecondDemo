@@ -6,5 +6,49 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularSecondDemo';
+
+  OrderID = "Ord123"
+
+  //a:number = 1;
+
+
+  EvtShowModel(showtext: string) {
+    alert(showtext);
+
+  }
+
+  CityName = "BanGlOre";
+  CityName1 = "BanGlOre";
+  CityName2 = "BanGlore"
+
+  inputType = "text";
+
+  evtKeyup(OrderCity: HTMLInputElement) {  //html elemnt
+    //console.log(OrderCity.value);
+    this.CityName = OrderCity.value;
+    //  if(this.CityName.length>10){
+    //    alert("Please do't enter the value");
+    //  }
+
+    this.CityName = OrderCity.value;
+    if (this.CityName.length > 10) {
+      //alert("Please do't enter the value");
+      this.CityName = this.CityName.toLowerCase();
+      this.inputType = "checkbox";
+    }
+
+
+  }
+
+  evtngmodelChange(OrderCity: any) {  //textbox value
+    console.log(OrderCity);
+    if (OrderCity.length > 10) {
+      this.CityName1 = OrderCity.toLowerCase();
+      this.inputType = "checkbox";
+    }
+    if (OrderCity == "Hyderabad" || OrderCity == "Chennai") {
+      alert("Please do't enter the " + OrderCity);
+    }
+  }
+
 }
