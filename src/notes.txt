@@ -19,3 +19,5 @@
 netstat -ano | findstr :4200
 tskill yourPID
 
+git pull origin master
+
