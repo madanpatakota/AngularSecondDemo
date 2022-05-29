@@ -1,0 +1,21 @@
+
+// when team will give the .git repo
+  open git bash
+  git clone https://github.com/madanpatakota/AngularSecondDemo.git
+  
+  open cmdprompt from the folder
+  enter code .
+  it will open the visual studio code
+  
+  
+  open new terminal window
+  npm i
+  wait for few mins
+  ng s
+  check the port number
+  run in the chrome
+
+
+netstat -ano | findstr :4200
+tskill yourPID
+
